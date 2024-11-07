@@ -2,8 +2,9 @@ Forked from https://github.com/Fmstrat/samba-domain
 
 # Samba Server (domain joined) for Docker
   
-A well documented, tried and tested Samba Active Directory Domain Controller that works with the standard Windows management tools; built from scratch using internal DNS and kerberos and not based on existing containers.
+"A well documented, tried and tested Samba Active Directory Domain Controller that works with the standard Windows management tools; built from scratch using internal DNS and kerberos and not based on existing containers."
   
+Except I modified it to be a Samba server joining as a member server to a Windows AD domain.
   
 ## Documentation
 
