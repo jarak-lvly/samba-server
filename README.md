@@ -45,5 +45,8 @@ Copy over my already in-use files, which I know works in the Win AD / winbind en
 krb5.conf  
 pre_smb.conf # This is a minimal smb.conf that we use to join and then switch to the basic smb.conf  
 smb.conf  # This smb.conf is basic; no fancy bells and whistles for this test.  
+
+### Notes  
+The samba_docker-compose.yml is for bringing up both the Samba DC and server (two different containers) on the same docker network.
    
 
