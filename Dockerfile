@@ -14,6 +14,7 @@ RUN \
         dos2unix \
         samba \
         samba-common \
+        samba-dsdb-modules \
         smbclient \
         ldap-utils \
         winbind \
@@ -22,6 +23,7 @@ RUN \
         krb5-user \
         krb5-kdc \
         supervisor \
+        ldb-tools \
         vim-tiny \
         curl \
         dnsutils \
@@ -33,10 +35,9 @@ RUN \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     rm -rf /tmp/* /var/tmp/*
 
-VOLUME [ "/var/lib/samba", "/etc/samba/external", "/export/store" ]
+VOLUME [ "/var/lib/samba", "/etc/samba/external", "/export/storage" ]
 
 RUN mkdir -p /files
 COPY ./files/ /files/
 RUN chmod 755 /files/init.sh /files/domain.sh
 CMD /files/init.sh
-
